@@ -1,0 +1,16 @@
+services:
+  chronocat:
+    image: he0119/chronocat-docker
+    tty: true
+    container_name: chronocat
+    restart: always
+    ports:
+      - "6080:80"
+      - "5901:5901"
+      - "16530:16530"
+    environment:
+      - VNC_PASSWD=password
+    volumes:
+      - ./chronocat/data:/root/Tencent Files
+      - ./chronocat/loader-data:/root/LiteLoaderQQNT
+      - ./chronocat/BetterUniverse:/wine/drive_c/users/root/AppData/Roaming/BetterUniverse
