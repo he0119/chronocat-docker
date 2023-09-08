@@ -1,5 +1,7 @@
 FROM ilharp/qqnt:0.0.3-windows-amd64-up9.9.0.14569
 
+ARG CHRONOCAT_VERSION=v0.0.38
+
 RUN apt update && \
   \
   # 安装依赖
@@ -16,10 +18,10 @@ RUN apt update && \
   # 下载 Chronocat
   mkdir -p /root/LiteLoaderQQNT/plugins && \
   cd /root/LiteLoaderQQNT/plugins && \
-  wget https://github.com/chrononeko/chronocat/releases/download/v0.0.38/chronocat-llqqnt-v0.0.38.zip && \
+  wget https://github.com/chrononeko/chronocat/releases/download/${CHRONOCAT_VERSION}/chronocat-llqqnt-${CHRONOCAT_VERSION}.zip && \
   # 安装 Chronocat
-  unzip chronocat-llqqnt-v0.0.38.zip && \
-  rm chronocat-llqqnt-v0.0.38.zip && \
+  unzip chronocat-llqqnt-${CHRONOCAT_VERSION}.zip && \
+  rm chronocat-llqqnt-${CHRONOCAT_VERSION}.zip && \
   \
   # 清理
   apt purge -y wget unzip && \
