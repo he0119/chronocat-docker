@@ -47,7 +47,9 @@ jobs:
         uses: docker/metadata-action@v4
         id: metadata
         with:
-          images: ${{ github.repository_owner }}/chronocat-docker
+          images: |
+            he0119/chronocat-docker
+            ghcr.io/he0119/chronocat-docker
           tags: latest
 
       - name: Build and Publish
