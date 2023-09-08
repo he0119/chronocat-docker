@@ -11,6 +11,6 @@ services:
     environment:
       - VNC_PASSWD=password
     volumes:
-      - ./chronocat/data:/root/Tencent Files
-      - ./chronocat/loader-data:/root/LiteLoaderQQNT
-      - ./chronocat/BetterUniverse:/wine/drive_c/users/root/AppData/Roaming/BetterUniverse
+      - ./Tencent Files:/root/Tencent Files
+      - ./LiteLoaderQQNT:/root/LiteLoaderQQNT
+      - ./BetterUniverse:/wine/drive_c/users/root/AppData/Roaming/BetterUniverse
