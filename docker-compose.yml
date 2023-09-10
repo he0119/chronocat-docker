@@ -12,5 +12,4 @@ services:
       - VNC_PASSWD=password
     volumes:
       - ./Tencent Files:/root/Tencent Files
-      - ./LiteLoaderQQNT:/root/LiteLoaderQQNT
       - ./BetterUniverse:/wine/drive_c/users/root/AppData/Roaming/BetterUniverse
