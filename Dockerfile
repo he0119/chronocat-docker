@@ -1,6 +1,6 @@
 FROM ilharp/qqnt:0.0.3-windows-amd64-up9.9.0.14569
 
-ARG CHRONOCAT_VERSION=v0.0.38
+ARG CHRONOCAT_VERSION
 
 RUN apt update && \
   \
