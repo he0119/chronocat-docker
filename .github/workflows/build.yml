@@ -53,6 +53,7 @@ jobs:
           CHRONOCAT_VERSION: ${{ steps.version.outputs.version }}
         run: |
           from packaging import version
+          import os
           skip = False
           if version.parse(os.environ["DOCKER_VERSION"]) >= version.parse(os.environ["CHRONOCAT_VERSION"]):
               skip = True
