@@ -104,7 +104,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/chronocat-docker
           tags: |
             latest
-            ${{ needs.check.outputs.version.outputs.version }}
+            ${{ needs.check.outputs.version }}
 
       - name: Build and Publish
         uses: docker/build-push-action@v4
@@ -114,4 +114,4 @@ jobs:
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
           build-args: |
-            CHRONOCAT_VERSION=${{ needs.check.outputs.version.outputs.version }}
+            CHRONOCAT_VERSION=${{ needs.check.outputs.version }}
